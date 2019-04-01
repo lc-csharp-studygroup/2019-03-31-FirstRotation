@@ -49,7 +49,8 @@ namespace HighSchool
         
         public static List<Student> StarStudents(List<Student> students)
         {
-            return students.Where(student => student.Grade >= 9 && student.GPA >= 3).ToList();
+            return students.Where(student => student.Grade >= 9 && student.GPA >= 3)
+                .OrderByDescending(student => student.Grade).ToList();
 
         }
         
